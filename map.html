@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shipment Tracking</title>
+  <link rel="stylesheet" href="map.css">
+    <body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="lo.png" class="icon"></img>
+      <span><strong>FLY AIRWAYS DELIVERY</strong></span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="#">Help</a>
+    </nav>
+  </header>
+
+<section class="track">
+      <div class="tracking">
+      <h4>Tarcking Number<br>AWL-557F282B7</h4>
+</section>
+
+<section class="map">
+  <img src="co.png" alt="map">
+</section>
+
+<section class="sectiontwo">
+  <div class="timeline">
+    <div class="event">
+      <div class="dot green"></div>
+      <div class="date">Sat, 28 June 2025</div>
+      <div>Shipment Ready To Be Delivered to Colombia</div>
+    </div>
+    <div class="event">
+      <div class="dot orange"></div>
+      <div class="date">Sat, 28 June 2025</div>
+      <div>Shipment has been recieved at FLY WAREHOUSE</div>
+    </div>
+    <div class="event">
+      <div class="dot gray"></div>
+      <div class="date">Sun, 29 June, 2025</div>
+      <div>Item Leaving Phillipines</div>
+    </div>
+
+        <div class="event">
+      <div class="dot red"></div>
+      <div class="date">Mon, 30 June, 2025</div>
+      <div>Package on its way to Colombia</div>
+    </div>
+
+    <div class="event">
+      <div class="dot blue"></div>
+      <div class="date">Wed, 2 July, 2025</div>
+      <div>Item Arrived At Enrique Olaya Herrera Airport (EOH/SKMD) Colombia</div>
+    </div>
+  </div>
+  </section>
+
+  <section class="sectionthree">
+    <div class="button">
+    <a href="details.html"><button type="butto">View package details</button></a>
+  
+  </section>
+
+
+
+  <div class="barcode">
+    <img src="https://barcode.tec-it.com/barcode.ashx?data=2601729756&code=Code128&translate-esc=on" alt="Barcode">
+  </div>
+
+</body>
+</html>
+
+
+    <script>
+const params = new URLSearchParams(window.location.search);
+const code = params.get("track");
+
+if (code) {
+document.getElementById("trackingInfo").textContent = `Your tracking number is: ${code}`;
+} else {
+document.getElementById("trackingInfo").textContent = "No tracking number provided.";
+}
+</script>
+
+  </div>
+</body>
+</html>
